@@ -10,7 +10,6 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import axios from 'axios';
-import {DatePicker} from '@mui/material';
 
 const CalendarContent = () => {
 const theme = createTheme();
@@ -89,8 +88,6 @@ const theme = createTheme();
             onChange={(e) => setQuestion2(e.target.value)} variant="standard" />
 
 
-
-    
       
     </Box>
 
