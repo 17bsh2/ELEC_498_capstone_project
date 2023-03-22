@@ -36,7 +36,9 @@ const ImageDropZone = () => {
 
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Box
+
+    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Box
         alignItems='center'
         border={1}
         borderRadius={1}
@@ -52,6 +54,7 @@ const ImageDropZone = () => {
           }
         }}
         onClick={handleClick}>
+
         <Box
           sx={{
             '& img': {
@@ -83,8 +86,40 @@ const ImageDropZone = () => {
       </Menu>
 
         </Box>
+     </Box>
+     </Box>
 
-        <Box padding={2}>
+<Box sx={{ display: 'flex', justifyContent: 'center' }}>
+<Box
+alignItems='center'
+border={1}
+borderRadius={1}
+borderColor={theme.palette.divider}
+display='flex'
+flexWrap='wrap'
+justifyContent='center'
+padding={6}
+sx={{
+'&:hover': {
+  backgroundColor: theme.palette.action.hover,
+  cursor: 'pointer',
+}
+}}
+onClick={handleClick}>
+
+<Box
+sx={{
+  '& img': {
+    width: 100
+  }
+}}
+>
+<Typography variant='h1' align='center'>
+<HomeOutlinedIcon /> 
+</Typography>
+</Box>
+
+<Box padding={2}>
           <Typography variant='' color={theme.palette.text.secondary}>
           Does your family have history of ovarian, fallopian tube, or peritoneal cancers?
           (Family history in first-degree relatives. Includes parents, full-siblings, 
@@ -103,22 +138,38 @@ const ImageDropZone = () => {
       </Menu>
 
         </Box>
+</Box>
+</Box>
 
-        <Box padding={2}>
-          <Typography variant='' color={theme.palette.text.secondary}>
-          Enter the number of first-degree relatives with ovarian, fallopian tube, or peritoneal cancer. 
-          Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancers.
+    
+<Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Box
+        alignItems='center'
+        border={1}
+        borderRadius={1}
+        borderColor={theme.palette.divider}
+        display='flex'
+        flexWrap='wrap'
+        justifyContent='center'
+        padding={6}
+        sx={{
+          '&:hover': {
+            backgroundColor: theme.palette.action.hover,
+            cursor: 'pointer',
+          }
+        }}
+        onClick={handleClick}>
+
+        <Box
+          sx={{
+            '& img': {
+              width: 100
+            }
+          }}
+        >
+          <Typography variant='h1' align='center'>
+          <HomeOutlinedIcon /> 
           </Typography>
-          <Menu
-        id= "ovarsumm_fh_cnt"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>####</MenuItem>
-      </Menu>
-
         </Box>
 
         <Box padding={2}>
@@ -139,11 +190,11 @@ const ImageDropZone = () => {
       </Menu>
 
       </Box>
+     </Box>
+     </Box>
 
-      </Box>
+ </Box>
 
-  </Box>
-        
 )};
 
 export default ImageDropZone;
