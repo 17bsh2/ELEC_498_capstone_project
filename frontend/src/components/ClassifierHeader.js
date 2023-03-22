@@ -9,10 +9,39 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import axios from 'axios';
 
 const ClassifierHeader = () => {
 const theme = createTheme();
   const [anchorEl, setAnchorEl] = useState(null);
+
+  const [question1, setQuestion1] = useState('');
+  const [question2, setQuestion2] = useState('');
+  const [question3, setQuestion3] = useState('');
+  const [question4, setQuestion4] = useState('');
+  const [question5, setQuestion5] = useState('');
+  const [question6, setQuestion6] = useState('');
+  const [question7, setQuestion7] = useState('');
+  const [question8, setQuestion8] = useState('');
+  const [question9, setQuestion9] = useState('');
+  const [question10, setQuestion10] = useState('');
+  const [question11, setQuestion11] = useState('');
+  const [question12, setQuestion12] = useState('');
+  const [question13, setQuestion13] = useState('');
+  const [question14, setQuestion14] = useState('');
+  const [question15, setQuestion15] = useState('');
+  const [question16, setQuestion16] = useState('');
+  const [question17, setQuestion17] = useState('');
+  const [question18, setQuestion18] = useState('');
+  const [question19, setQuestion1] = useState('');
+  const [question20, setQuestion2] = useState('');
+  const [question121, setQuestion1] = useState('');
+  const [question2, setQuestion2] = useState('');
+  */
+
+  const handleSubmit = async (e) => {
+    href = '/index';
+}
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -21,9 +50,35 @@ const theme = createTheme();
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const formData = {
+    question1,
+    question2,
+    question3,
+    question4,
+    question5,
+    question6,
+    question7,
+    question8,
+    question9,
+    question10,
+    question11,
+    question12,
+    question13,
+    question14,
+    question15,
+    question16,
+    question17,
+    question18,
+    question19,
+    question20,
+    question21,
+    question22,
+    question23
+  };
     
     return(
-    <Grid item>
+    <form onSubmit={handleSubmit}>
             <Typography
                 color={theme.palette.text.primary}
                 variant='h2'
@@ -49,7 +104,10 @@ const theme = createTheme();
                     First-degree relatives include parents, full-siblings, and children.
                      Half-siblings are not included. (Yes/No)
                 </Typography>
-            <TextField id="fh_cancer" label="Yes/No" variant="standard" />
+            <TextField id="fh_cancer" label="Yes/No" value={question1}
+            onChange={(e) => setQuestion1(e.target.value)} variant="standard" />
+    
+      
     </Box>
 
     <Box padding={2}>
@@ -60,7 +118,9 @@ const theme = createTheme();
                     Enter the number of first-degree relatives with ovarian, fallopian tube, or peritoneal 
                     cancer. Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancer.
                 </Typography>
-                <TextField id="ovarsumm_fh_cnt" label="#" variant="standard" />
+                <TextField id="ovarsumm_fh_cnt" label="#"
+                value={question2}
+                onChange={(e) => setQuestion2(e.target.value)} variant="standard" />
     </Box>
     <Box padding={2}>
     <Typography
@@ -71,7 +131,10 @@ const theme = createTheme();
                    
                     Indicate EITHER: Yes/No/Male Relative Only/Possibly - Relative or Cancer Type Not Clear
                 </Typography>
-                <TextField id="breast_fh" label="Yes/No/Male Relative Only/Possibly - Relative or Cancer Type Not Clear" variant="standard" />
+                <TextField id="breast_fh" 
+                label="Yes/No/Male Relative Only/Possibly - Relative or Cancer Type Not Clear"
+                value={question3}
+            onChange={(e) => setQuestion3(e.target.value)} variant="standard" />
     </Box>
 
 
@@ -85,7 +148,10 @@ const theme = createTheme();
                      peritoneal cancers. Indicate EITHER: 
                      Yes - Immediate Family Member/No/Possibly - Relative or Cancer Type Not Clear
                 </Typography>
-                <TextField id="ovarsumm_fh" label="Yes - Immediate Family Member/No/Possibly - Relative or Cancer Type Not Clear" variant="standard" />
+                <TextField id="ovarsumm_fh"
+                 label="Yes - Immediate Family Member/No/Possibly - Relative or Cancer Type Not Clear"
+                 value={question4}
+            onChange={(e) => setQuestion4(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -95,7 +161,9 @@ const theme = createTheme();
                 >
                     Indicate how many first-degree relatives have breast cancer.
                 </Typography>
-                <TextField id="breast_fh_cnt" label="#" variant="standard" />
+                <TextField id="breast_fh_cnt" label="#"
+                value={question5}
+                onChange={(e) => setQuestion5(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -306,7 +374,7 @@ const theme = createTheme();
                     8 - Not Ascertained
                     9 - Don't Know
                 </Typography>
-                <TextField id="PHQ85_A" label="1" variant="standard" />
+                <TextField id="PHQ85_A" label="1/2/3/4/5/6/7/8/9" variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -328,8 +396,37 @@ const theme = createTheme();
                 </Typography>
                 <TextField id="DIFF_A" label="1/2/3/4/5/6/7/8/9" variant="standard" />
     </Box>
-        </Grid>
+
+    <Box
+  m={1}
+ //margin
+  display="flex"
+  justifyContent="flex-end"
+  alignItems="flex-end"
+>
+<Button variant="contained" type="submit"> Submit Survey </Button>
+</Box>
+
+
+        </form>
     );
 };
 
 export default ClassifierHeader;
+
+
+
+/*
+const SurveyForm = () => {
+  const [question1, setQuestion1] = useState('');
+  const [question2, setQuestion2] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      question1,
+      question2,
+    };
+
+*/
