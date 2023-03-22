@@ -1,11 +1,14 @@
+
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+
 
 /*
 PLCO: 
@@ -34,8 +37,46 @@ const ImageDropZone = () => {
     setAnchorEl(null);
   };
 
-  return (
-    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+  return null;
+}/*
+        <Grid item>
+            <Typography
+                color={theme.palette.text.primary}
+                variant='h2'
+            >
+                Survey
+            </Typography>
+            <Box paddingTop={2}>
+                <Typography
+                    color={theme.palette.text.secondary}
+                    variant='h5'
+                >
+                    Select answers to the question prompts as best as possible, these answers will determine your results!
+                </Typography>
+            </Box>
+
+            <Box padding={2}>
+      <Typography variant='' color={theme.palette.text.secondary}>
+      Does your family have history of any cancer?
+      Any first-degree relative with cancer. Basal cell skin cancers are not included. First-degree relatives include parents, 
+      full-siblings, and children. Half-siblings are not included.
+      </Typography>
+      <Menu
+    id= "fh_cancer1"
+    anchorEl={anchorEl}
+    keepMounted
+    open={Boolean(anchorEl)}
+    onClose={handleClose}
+  >
+    <MenuItem onClick={handleClose}>No</MenuItem>
+    <MenuItem onClick={handleClose}>Yes</MenuItem>
+    <MenuItem onClick={handleClose}>Decline to answer</MenuItem>
+  </Menu>
+
+    </Box>
+        
+        </Grid>;*/
+/*<Box sx={{ display: 'flex', justifyContent: 'center' }}>
 
     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Box
@@ -194,7 +235,6 @@ sx={{
      </Box>
 
  </Box>
-
-)};
+*/
 
 export default ImageDropZone;
