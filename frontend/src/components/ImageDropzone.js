@@ -7,7 +7,15 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
+/*
+PLCO: 
+   'benign_ovcyst', 'endometriosis', 'uterine_fib', 'mammo_history', 'papsmear_history', 'pelvic_history', 'usound_history', 'ca125_history', 'bbd', 'ovariesr_f', 'age', 'weight_f', 'height_f', 'ovary_trial_flag' 
+ 
 
+NHIS: 
+
+ PAIAPG3M_A, PHQ85_A, DIFF_A 
+*/
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faImage as ImageIcon } from'@fortawesome/free-regular-svg-icons';
@@ -43,8 +51,7 @@ const ImageDropZone = () => {
             cursor: 'pointer',
           }
         }}
-        onClick={handleClick}
-      >
+        onClick={handleClick}>
         <Box
           sx={{
             '& img': {
@@ -56,27 +63,87 @@ const ImageDropZone = () => {
           <HomeOutlinedIcon /> 
           </Typography>
         </Box>
+
         <Box padding={2}>
           <Typography variant='' color={theme.palette.text.secondary}>
-            Select survey structure
+          Does your family have history of any cancer?
+          Any first-degree relative with cancer. Basal cell skin cancers are not included. First-degree relatives include parents, 
+          full-siblings, and children. Half-siblings are not included.
           </Typography>
           <Menu
-        id="simple-menu"
+        id= "fh_cancer"
         anchorEl={anchorEl}
         keepMounted
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Option 1</MenuItem>
-        <MenuItem onClick={handleClose}>Option 2</MenuItem>
-        <MenuItem onClick={handleClose}>Option 3</MenuItem>
+        <MenuItem onClick={handleClose}>No</MenuItem>
+        <MenuItem onClick={handleClose}>Yes</MenuItem>
+        <MenuItem onClick={handleClose}>Decline to answer</MenuItem>
       </Menu>
 
         </Box>
+
+        <Box padding={2}>
+          <Typography variant='' color={theme.palette.text.secondary}>
+          Does your family have history of ovarian, fallopian tube, or peritoneal cancers?
+          (Family history in first-degree relatives. Includes parents, full-siblings, 
+          and children. Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancers.)
+          </Typography>
+          <Menu
+        id= "ovarsumm_fh"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>No</MenuItem>
+        <MenuItem onClick={handleClose}>Yes, Immediate Family Member</MenuItem>
+        <MenuItem onClick={handleClose}>Possibly, Relative or Cancer Type Not Clear</MenuItem>
+      </Menu>
+
+        </Box>
+
+        <Box padding={2}>
+          <Typography variant='' color={theme.palette.text.secondary}>
+          Enter the number of first-degree relatives with ovarian, fallopian tube, or peritoneal cancer. 
+          Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancers.
+          </Typography>
+          <Menu
+        id= "ovarsumm_fh_cnt"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>####</MenuItem>
+      </Menu>
+
+        </Box>
+
+        <Box padding={2}>
+          <Typography variant='' color={theme.palette.text.secondary}>
+          Enter the diagnosis age of the youngest first-degree relative diagnosed with ovarian, fallopian tube, or peritoneal 
+          cancer. 
+          Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancers.
+          </Typography>
+          <Menu
+        id= "ovarsumm_fh_cnt"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>####</MenuItem>
+        <MenuItem onClick={handleClose}>Not Applicable</MenuItem>
+      </Menu>
+
       </Box>
-      
-    </Box>
-  );
-};
+
+      </Box>
+
+  </Box>
+        
+)};
 
 export default ImageDropZone;
