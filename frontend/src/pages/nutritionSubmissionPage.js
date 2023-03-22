@@ -12,14 +12,14 @@ import { useTheme } from '@mui/material';
 
 import ImageDropzone from '../components/ImageDropzone';
 import ClassifierButtons from '../components/ClassifierButtons';
-import CalendarContent from '../components/CalendarContent';
+import nutritionSubmissionContent from '../components/nutritionSubmissionContent';
 import ClassifierResult from '../components/ClassifierResult';
 import ClassifyAgain from '../components/ClassifyAgain';
 import Spacer from '../components/Spacer';
 import replaceUnderscore from '../utils/replaceUnderscore';
 import capitalizeFirstLetter from '../utils/capitalizeFirstLetter';
 
-const Calendar = () => {
+const nutritionSubmissionPage = () => {
     const theme = useTheme();
     const [isLoading, setIsLoading] = React.useState(false);
     const [image, setImage] = React.useState(null);
@@ -39,7 +39,7 @@ const Calendar = () => {
         const formData = new FormData();
         formData.append('image', file, file.name);
 
-        axios.post('http://127.0.0.1:8000/api/calendar/', formData, {
+        axios.post('http://127.0.0.1:8000/api/nutritionSubmissionPage/', formData, {
             headers: {
                 'accept': 'application/json',
                 'content-type': 'multipart/form-data'
@@ -52,7 +52,7 @@ const Calendar = () => {
     };
 
     const getClassificationResult = (obj, imgDataUrl) => {
-        axios.get(`http://127.0.0.1:8000/api/calendar/${obj.data.id}/`, {
+        axios.get(`http://127.0.0.1:8000/api/nutritionSubmissionPage/${obj.data.id}/`, {
             headers: {
                 'accept': 'application/json',
             }
@@ -78,7 +78,7 @@ const Calendar = () => {
         <React.Fragment>
             <Head>
                 <title>
-                    Calendar Page | Ovarian Cancer Risk Prediction
+                    Submission Page | Ovarian Cancer Risk Predicition
                 </title>
             </Head>
             <Box 
@@ -98,7 +98,7 @@ const Calendar = () => {
                             spacing={3}
                             xs={12}
                         >
-                            <CalendarContent> </CalendarContent>
+                            <nutritionSubmissionContent></nutritionSubmissionContent>
                             <Grid item xs={12}>
                                 {isLoading && (
                                     <Box marginBottom={3} marginTop={2}>
@@ -143,4 +143,4 @@ const Calendar = () => {
     );
 };
 
-export default Calendar;
+export default nutritionSubmissionPage;

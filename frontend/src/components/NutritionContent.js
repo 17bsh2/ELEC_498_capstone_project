@@ -20,8 +20,13 @@ const theme = createTheme();
   
 
   const handleSubmit = async (e) => {
-
+    e.preventDefault();
+    if(question1 > 4000){
+    window.location.href = "/classifier";}
+    else {
+        window.location.href = "/nutritionSubmissionPage";}
 };
+
 
 
   const handleClick = (event) => {

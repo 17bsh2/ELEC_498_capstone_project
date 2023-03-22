@@ -10,6 +10,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import axios from 'axios';
+import {DatePicker} from '@mui/material';
 
 const CalendarContent = () => {
 const theme = createTheme();
@@ -21,7 +22,11 @@ const theme = createTheme();
   
 
   const handleSubmit = async (e) => {
-
+    e.preventDefault();
+    if(question2 - question1 > 35){
+    window.location.href = "/classifier";}
+    else {
+        window.location.href = "/nutritionSubmissionPage";}
 }
 
   const handleClick = (event) => {
@@ -33,7 +38,8 @@ const theme = createTheme();
   };
 
   const formData = {
-    question1
+    question1,
+    question2
   };
     
     return(
@@ -63,7 +69,7 @@ const theme = createTheme();
                     
                      <Typography></Typography>
                 </Typography>
-            <TextField id="p_startDate" label="DD/MM/YYYY" value={question1}
+            <TextField id="p_startDate" label="YYYYMMDD" value={question1}
             onChange={(e) => setQuestion1(e.target.value)} variant="standard" />
     
       
@@ -79,8 +85,11 @@ const theme = createTheme();
                     
                      <Typography></Typography>
                 </Typography>
-            <TextField id="p_endDate" label="DD/MM/YYYY" value={question2}
+            <TextField id="p_endDate" label="YYYYMMDD" value={question2}
             onChange={(e) => setQuestion2(e.target.value)} variant="standard" />
+
+
+
     
       
     </Box>
