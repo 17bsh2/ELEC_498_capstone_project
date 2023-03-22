@@ -56,7 +56,7 @@ const Header = ({ onSidebarMobileOpen }) => {
                                         marginLeft: '10px'
                                     }}
                                 >
-                                    Ovarian Cancer Risk Predicition
+                                    Ovarian Cancer Risk Prediction
                                 </Typography>
                             </IconButton>
                         </Box>
@@ -99,6 +99,47 @@ const Header = ({ onSidebarMobileOpen }) => {
                             <PollIcon 
                                 style={{ height: 23, width: 23 }} 
                             /> Survey
+                        </Button>
+                        <Button
+                            component='a'
+                            color='primary'
+                            href='/calendar'
+                            size='small'
+                            variant='text'
+                            sx={{
+                                color: theme.palette.common.white,
+                                fontSize: theme.typography.subtitle1,
+                                fontWeight: 'medium',
+                                mr: 2,
+                                '& svg': {
+                                    mr: 0.5
+                                },
+                            }}
+                        >
+                            <PollIcon 
+                                style={{ height: 23, width: 23 }} 
+                            /> Calendar
+                        </Button>
+
+                        <Button
+                            component='a'
+                            color='primary'
+                            href='/nutrition'
+                            size='small'
+                            variant='text'
+                            sx={{
+                                color: theme.palette.common.white,
+                                fontSize: theme.typography.subtitle1,
+                                fontWeight: 'medium',
+                                mr: 2,
+                                '& svg': {
+                                    mr: 0.5
+                                },
+                            }}
+                        >
+                            <PollIcon 
+                                style={{ height: 23, width: 23 }} 
+                            /> Nutrition
                         </Button>
                     </Toolbar>
                 <Divider />

@@ -103,7 +103,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Has any first-degree relative had cancer?
+                   1. Has any first-degree relative had cancer?
                     <Typography></Typography> 
                     Basal cell skin cancers are not included. 
                     First-degree relatives include parents, full-siblings, and children.
@@ -121,7 +121,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Enter the number of first-degree relatives with ovarian, fallopian tube, or peritoneal 
+                   2. Enter the number of first-degree relatives with ovarian, fallopian tube, or peritoneal 
                     cancer. Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancer.
                     <Typography></Typography>
                 </Typography>
@@ -134,7 +134,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Breast cancer family history in first-degree relatives. Includes parents, full-siblings, and children.
+                   3. Breast cancer family history in first-degree relatives. Includes parents, full-siblings, and children.
                     <Typography></Typography>
                     Indicate EITHER:
                     <Typography></Typography> Yes
@@ -155,7 +155,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Ovarian, fallopian tube, or peritoneal cancers family history in first-degree relatives.
+                    4. Indicate ovarian, fallopian tube, or peritoneal cancers family history in first-degree relatives.
                      Includes parents, full-siblings, and children. Ovarian summary cancers include ovarian, fallopian tube and 
                      peritoneal cancers. 
                      <Typography></Typography>
@@ -179,7 +179,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Indicate how many first-degree relatives have breast cancer.
+                    5. Indicate how many first-degree relatives have breast cancer.
                     <Typography></Typography>
                 </Typography>
                 <TextField id="breast_fh_cnt" label="#"
@@ -192,7 +192,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Indicate the diagnosis age of the youngest first-degree relative diagnosed with breast cancer.
+                    6. Indicate the diagnosis age of the youngest first-degree relative diagnosed with breast cancer.
                     <Typography></Typography>
                     If not applicable, enter .N
                     <Typography></Typography>
@@ -207,7 +207,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Indicate the diagnosis age of the youngest first-degree relative diagnosed with ovarian, fallopian tube,
+                    7. Indicate the diagnosis age of the youngest first-degree relative diagnosed with ovarian, fallopian tube,
                      or peritoneal cancer. Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancers.
                     
                      <Typography></Typography>
@@ -224,7 +224,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Have you ever been told by a doctor that you had a benign ovarian tumor/cyst?
+                    8. Have you ever been told by a doctor that you had a benign ovarian tumor/cyst?
                     <Typography></Typography>
 
                 </Typography>
@@ -238,7 +238,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                Have you ever been told by a doctor that you had endometriosis?
+                9. Have you ever been told by a doctor that you had endometriosis?
                 <Typography></Typography>
                 </Typography>
                 <TextField id="endometriosis" label="Yes/No/Decline to Answer"
@@ -251,7 +251,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Have you ever been told by a doctor that you had uterine fibroid tumors?
+                    10. Have you ever been told by a doctor that you had uterine fibroid tumors?
                     <Typography></Typography>
                 </Typography>
                 <TextField id="uterine_fib" label="Yes/No/Decline to Answer"
@@ -264,7 +264,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                     During the past three years, have you had a mammogram?
+                    11.  During the past three years, have you had a mammogram?
                      <Typography></Typography>
 
                 </Typography>
@@ -278,7 +278,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    During the past three years, have you had a pap smear?
+                   12. During the past three years, have you had a pap smear?
                     <Typography></Typography>
                 </Typography>
                 <TextField id="papsmear_history" label="Yes/No/Decline to Answer"
@@ -291,7 +291,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                     During the past three years, have you had a pelvic examination?
+                     13. During the past three years, have you had a pelvic examination?
                      <Typography></Typography>
                 </Typography>
                 <TextField id="pelvic_history" label="Yes/No/Decline to Answer"
@@ -304,7 +304,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    During the past three years, have you had an ultrasound or scan of your ovaries?
+                    14. During the past three years, have you had an ultrasound or scan of your ovaries?
                     <Typography></Typography>
 
                 </Typography>
@@ -318,7 +318,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    During the past three years, have you had a blood test for ovarian cancer, for example CA-125?
+                    15. During the past three years, have you had a blood test for ovarian cancer, for example CA-125?
                     <Typography></Typography>
 
                 </Typography>
@@ -332,7 +332,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Have you ever been told by a doctor that you had benign or fibrocystic breast disease?
+                   16. Have you ever been told by a doctor that you had benign or fibrocystic breast disease?
                     <Typography></Typography>
 
                 </Typography>
@@ -346,7 +346,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Have you ever had one or both of your ovaries removed?
+                    17. Have you ever had one or both of your ovaries removed?
                     <Typography>
                     Indicate EITHER:
                     <Typography></Typography>
@@ -373,7 +373,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Enter your age.
+                    18. Enter your age.
                     <Typography></Typography>
                 </Typography>
                 <TextField id="age" label="#"
@@ -386,7 +386,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    What is your weight in pounds?
+                    19. What is your weight in pounds?
                     <Typography></Typography>
                 </Typography>
                 <TextField id="weight_f" label="#"
@@ -399,7 +399,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    What is your height in inches?
+                    20. What is your height in inches?
                     <Typography></Typography>
                 </Typography>
                 <TextField id="height_f" label="# inches" 
@@ -412,7 +412,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Did you have ovaries at this height and weight?
+                    21. Did you have ovaries at this height and weight?
                     <Typography></Typography>
                 </Typography>
                 <TextField id="ovary_trial_flag" label="Yes/No"
@@ -425,7 +425,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Over the past three months, how much have you beenbothered by abdominal, pelvic, or genital pain?
+                    22. Over the past three months, how much have you beenbothered by abdominal, pelvic, or genital pain?
                     <Typography>
                     Indicate either:
                     <Typography></Typography>
@@ -454,7 +454,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Over the last two weeks, how often have you been bothered by poor appetite or overeating?
+                    23. Over the last two weeks, how often have you been bothered by poor appetite or overeating?
                     <Typography>
                     Indicate either:
                     <Typography></Typography>
@@ -483,7 +483,7 @@ const theme = createTheme();
                     color={theme.palette.text.secondary}
                     variant='h8'
                 >
-                    Do you have difficulty walking or climbing steps? Would you say no difficulty,
+                   24. Do you have difficulty walking or climbing steps? Would you say no difficulty,
                     some difficulty, a lot of difficulty, or you cannot do this at all?
                     <Typography>
                     Indicate either:
