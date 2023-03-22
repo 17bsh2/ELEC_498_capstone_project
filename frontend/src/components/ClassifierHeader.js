@@ -33,14 +33,18 @@ const theme = createTheme();
   const [question16, setQuestion16] = useState('');
   const [question17, setQuestion17] = useState('');
   const [question18, setQuestion18] = useState('');
-  const [question19, setQuestion1] = useState('');
-  const [question20, setQuestion2] = useState('');
-  const [question121, setQuestion1] = useState('');
-  const [question2, setQuestion2] = useState('');
-  */
+  const [question19, setQuestion19] = useState('');
+  const [question20, setQuestion20] = useState('');
+  const [question21, setQuestion21] = useState('');
+  const [question22, setQuestion22] = useState('');
+  const [question23, setQuestion23] = useState('');
+  const [question24, setQuestion24] = useState('');
+
+  
 
   const handleSubmit = async (e) => {
-    href = '/index';
+
+    
 }
 
   const handleClick = (event) => {
@@ -74,7 +78,8 @@ const theme = createTheme();
     question20,
     question21,
     question22,
-    question23
+    question23,
+    question24
   };
     
     return(
@@ -174,7 +179,9 @@ const theme = createTheme();
                     Indicate the diagnosis age of the youngest first-degree relative diagnosed with breast cancer.
                     If not applicable, enter .N
                 </Typography>
-                <TextField id="breast_fh_age" label="# OR .N" variant="standard" />
+                <TextField id="breast_fh_age" label="# OR .N" 
+                value={question6}
+                onChange={(e) => setQuestion6(e.target.value)}variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -186,7 +193,9 @@ const theme = createTheme();
                      or peritoneal cancer. Ovarian summary cancers include ovarian, fallopian tube and peritoneal cancers.
                      If not applicable, enter .N
                 </Typography>
-                <TextField id="ovarsumm_fh_age" label="# OR .N" variant="standard" />
+                <TextField id="ovarsumm_fh_age" label="# OR .N"
+                value={question7}
+                onChange={(e) => setQuestion7(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -197,7 +206,9 @@ const theme = createTheme();
                     Have you ever been told by a doctor that you had a benign ovarian tumor/cyst?
 
                 </Typography>
-                <TextField id="benign_ovcyst" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="benign_ovcyst" label="Yes/No/Decline to Answer"
+                value={question8}
+                onChange={(e) => setQuestion8(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -207,7 +218,9 @@ const theme = createTheme();
                 >
                 Have you ever been told by a doctor that you had endometriosis?
                 </Typography>
-                <TextField id="endometriosis" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="endometriosis" label="Yes/No/Decline to Answer"
+                value={question9}
+                onChange={(e) => setQuestion9(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -217,7 +230,9 @@ const theme = createTheme();
                 >
                     Have you ever been told by a doctor that you had uterine fibroid tumors?
                 </Typography>
-                <TextField id="uterine_fib" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="uterine_fib" label="Yes/No/Decline to Answer"
+                value={question10}
+                onChange={(e) => setQuestion10(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -228,7 +243,9 @@ const theme = createTheme();
                      During the past three years, have you had a mammogram?
 
                 </Typography>
-                <TextField id="mammo_history" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="mammo_history" label="Yes/No/Decline to Answer"
+                value={question11}
+                onChange={(e) => setQuestion11(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -238,7 +255,9 @@ const theme = createTheme();
                 >
                     During the past three years, have you had a pap smear?
                 </Typography>
-                <TextField id="papsmear_history" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="papsmear_history" label="Yes/No/Decline to Answer"
+                value={question12}
+                onChange={(e) => setQuestion12(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -248,7 +267,9 @@ const theme = createTheme();
                 >
                      During the past three years, have you had a pelvic examination?
                 </Typography>
-                <TextField id="pelvic_history" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="pelvic_history" label="Yes/No/Decline to Answer"
+                value={question13}
+                onChange={(e) => setQuestion13(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -259,7 +280,9 @@ const theme = createTheme();
                     During the past three years, have you had an ultrasound or scan of your ovaries?
 
                 </Typography>
-                <TextField id="usound_history" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="usound_history" label="Yes/No/Decline to Answer"
+                value={question14}
+                onChange={(e) => setQuestion14(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -270,7 +293,9 @@ const theme = createTheme();
                     During the past three years, have you had a blood test for ovarian cancer, for example CA-125?
 
                 </Typography>
-                <TextField id="ca125_history" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="ca125_history" label="Yes/No/Decline to Answer"
+                value={question15}
+                onChange={(e) => setQuestion15(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -281,7 +306,9 @@ const theme = createTheme();
                     Have you ever been told by a doctor that you had benign or fibrocystic breast disease?
 
                 </Typography>
-                <TextField id="bbd" label="Yes/No/Decline to Answer" variant="standard" />
+                <TextField id="bbd" label="Yes/No/Decline to Answer"
+                value={question16}
+                onChange={(e) => setQuestion16(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -298,7 +325,9 @@ const theme = createTheme();
                     Both Ovaries - Total
                     Don't Know
                 </Typography>
-                <TextField id="ovariesr_f" label="" variant="standard" />
+                <TextField id="ovariesr_f" label="" 
+                value={question17}
+                onChange={(e) => setQuestion17(e.target.value)}variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -308,7 +337,9 @@ const theme = createTheme();
                 >
                     Enter your age.
                 </Typography>
-                <TextField id="age" label="#" variant="standard" />
+                <TextField id="age" label="#"
+                value={question18}
+                onChange={(e) => setQuestion18(e.target.value)} variant="standard" />
     </Box>
         
     <Box padding={2}>
@@ -318,7 +349,9 @@ const theme = createTheme();
                 >
                     What is your weight in pounds?
                 </Typography>
-                <TextField id="weight_f" label="#" variant="standard" />
+                <TextField id="weight_f" label="#"
+                value={question19}
+                onChange={(e) => setQuestion19(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -328,7 +361,9 @@ const theme = createTheme();
                 >
                     What is your height in inches?
                 </Typography>
-                <TextField id="height_f" label="# inches" variant="standard" />
+                <TextField id="height_f" label="# inches" 
+                value={question20}
+                onChange={(e) => setQuestion20(e.target.value)}variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -338,7 +373,9 @@ const theme = createTheme();
                 >
                     Did you have ovaries at this height and weight?
                 </Typography>
-                <TextField id="ovary_trial_flag" label="Yes/No" variant="standard" />
+                <TextField id="ovary_trial_flag" label="Yes/No"
+                value={question21}
+                onChange={(e) => setQuestion21(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -356,7 +393,9 @@ const theme = createTheme();
                     8 Not Ascertained
                     9 Don't Know
                 </Typography>
-                <TextField id="PAIAPG3M_A" label="1/2/3/4/5/6/7/8/9" variant="standard" />
+                <TextField id="PAIAPG3M_A" label="1/2/3/4/5/6/7/8/9"
+                value={question22}
+                onChange={(e) => setQuestion22(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -374,7 +413,9 @@ const theme = createTheme();
                     8 - Not Ascertained
                     9 - Don't Know
                 </Typography>
-                <TextField id="PHQ85_A" label="1/2/3/4/5/6/7/8/9" variant="standard" />
+                <TextField id="PHQ85_A" label="1/2/3/4/5/6/7/8/9"
+                value={question23}
+                onChange={(e) => setQuestion23(e.target.value)} variant="standard" />
     </Box>
 
     <Box padding={2}>
@@ -394,7 +435,9 @@ const theme = createTheme();
                     9 - Don't Know
 
                 </Typography>
-                <TextField id="DIFF_A" label="1/2/3/4/5/6/7/8/9" variant="standard" />
+                <TextField id="DIFF_A" label="1/2/3/4/5/6/7/8/9"
+                value={question24}
+                onChange={(e) => setQuestion24(e.target.value)} variant="standard" />
     </Box>
 
     <Box
@@ -413,20 +456,3 @@ const theme = createTheme();
 };
 
 export default ClassifierHeader;
-
-
-
-/*
-const SurveyForm = () => {
-  const [question1, setQuestion1] = useState('');
-  const [question2, setQuestion2] = useState('');
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formData = {
-      question1,
-      question2,
-    };
-
-*/
